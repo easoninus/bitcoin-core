@@ -63,7 +63,7 @@ class Client {
 
     this.agentOptions = agentOptions;
     this.allowDefaultWallet = allowDefaultWallet;
-    this.auth = (password || username) && { pass: password, user: username };
+    // this.auth = (password || username) && { pass: password, user: username };
     this.hasNamedParametersSupport = false;
     this.headers = headers;
     this.host = host;
@@ -155,7 +155,7 @@ class Client {
     }
 
     return this.parser.rpc(await this.request.postAsync({
-      auth: _.pickBy(this.auth, _.identity),
+      // auth: _.pickBy(this.auth, _.identity),
       body: JSON.stringify(body),
       uri
     }));
